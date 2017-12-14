@@ -2,20 +2,26 @@ package valueLabs.shuttle.tracking.shuttleTracker.entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "shuttleStopDetails")
 public class ShuttleStops {
-	@Id
-	Long stopId ;
+	
+	@Id @GeneratedValue
+	Long stopId;
+	
 	@Column
 	String shuttleId;
+	
 	@Column
 	String stopName;
+	
 	@Column
 	Long trackId;
+	
 	public Long getStopId() {
 		return stopId;
 	}
